@@ -150,12 +150,12 @@ extern "C" void exl_main(void* x0, void* x1) {
 	/* Setup hooking enviroment. */
 	exl::hook::Initialize();
 
-	GetCpuTime::InstallAtOffset(0x700164);
-	EndFramebuffer::InstallAtOffset(0x6F480C);
+	GetCpuTime::InstallAtOffset(0x700050);
+	EndFramebuffer::InstallAtOffset(0x6F470C);
 	nvnWindowGetPresentInterval_ptr = (void*)(exl::util::GetSdkModuleInfo().m_Total.m_Start + 0x2CAB68);
 
 	// Wind speed factor from MAIN+0x15EC500
-	exl::patch::CodePatcher p(0x747DD8);
+	exl::patch::CodePatcher p(0x747CC4);
 	p.WriteInst(0xB0007528);
 	p.WriteInst(0xBD450106);
 
