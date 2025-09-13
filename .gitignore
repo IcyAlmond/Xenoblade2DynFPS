@@ -1,0 +1,9 @@
+.vscode/*
+build/*
+out/*
+deploy/*
+.cache/*
+
+*.elf
+*.nso
+*.npdm
